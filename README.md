@@ -19,3 +19,8 @@ Partition file for concatenated matrix.
 
 * `concat.raxml.support`
 RAxML-NG result.
+
+## Morphometrics folder
+
+* `PCA_MANOVA.r`
+R script for analysis. The remainder of the files in this folder are raw measurements in CSV format.
