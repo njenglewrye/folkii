@@ -18,10 +18,9 @@ cymule.avg <- cymule %>% group_by(herbarium) %>% summarise(species = first(speci
 thyrse <- read.csv("thyrse_length.csv")
 thyrse.avg <- thyrse %>% group_by(herbarium) %>% summarise(species = first(species), collectnum = first(collectnum), thyrselength = mean(thyrselength))
 
-petal <- read.csv("petal_exsertion.csv")
-petal.avg <- petal %>% group_by(herbarium) %>% summarise(species = first(species), collectnum = first(collectnum), petalexsertion = mean(petalexsertion))
+petal <- read.csv("petal_length.csv")
+petal.avg <- petal %>% group_by(herbarium) %>% summarise(species = first(species), collectnum = first(collectnum), petallength = mean(petallength))
 
-### Run this one for PCA_MANOVA using averages of specimens
 combined <- merge(zygomorphy.avg, pedicel.avg, by = "herbarium")
 combined <- merge(combined, campanulation.avg, by = "herbarium")
 combined <- merge(combined, flowerlength.avg, by = "herbarium")
@@ -29,23 +28,12 @@ combined <- merge(combined, cymule.avg, by = "herbarium")
 combined <- merge(combined, thyrse.avg, by = "herbarium")
 combined <- merge(combined, petal.avg, by = "herbarium")
 
-### Run this one for PCA_MANOVA using individual measurements as datapoints
-combined <- merge(zygomorphy, pedicel, by = "herbarium")
-combined <- merge(combined, campanulation, by = "herbarium")
-combined <- merge(combined, flowerlength, by = "herbarium")
-combined <- merge(combined, cymule, by = "herbarium")
-combined <- merge(combined, thyrse, by = "herbarium")
-combined <- merge(combined, petal, by = "herbarium")
-
-
-
 # Remove duplicate columns from the merge
 combined <- combined[, !duplicated(colnames(combined), fromLast = TRUE)]
 combined$species.y <- NULL
 combined$species.x <- NULL
 combined$collectnum.y <- NULL
 combined$collectnum.x <- NULL
-
 
 # Define species as a model factor
 combined$species <- as.factor(combined$species)
@@ -56,10 +44,10 @@ combined <- rapply(combined,scale,c("numeric","integer"),how="replace")
 
 # Build the discriminant
 library(MASS)
-discriminant <- lda(species ~ zygomorphylong + zygomorphyshort + zygomorphyratio + sinus + ovary + sinusovaryratio + flowerlength + branchlength + thyrselength + pedicellength + petalexsertion, data = combined, na.action="na.omit")
+discriminant <- lda(species ~ zygomorphylong + zygomorphyshort + zygomorphyratio + sinus + ovary + sinusovaryratio + flowerlength + branchlength + thyrselength + pedicellength + petallength, data = combined, na.action="na.omit")
 
 # Classification success
-discriminant.jackknife <- lda(species ~ zygomorphylong + zygomorphyshort + zygomorphyratio + sinus + ovary + sinusovaryratio+ flowerlength + branchlength + thyrselength + pedicellength + petalexsertion, data = combined, na.action="na.omit", CV = TRUE)
+discriminant.jackknife <- lda(species ~ zygomorphylong + zygomorphyshort + zygomorphyratio + sinus + ovary + sinusovaryratio+ flowerlength + branchlength + thyrselength + pedicellength + petallength, data = combined, na.action="na.omit", CV = TRUE)
 ct <- table(combined$species, discriminant.jackknife$class)
 sum(diag(prop.table(ct)))
 
@@ -73,7 +61,7 @@ library(ggplot2)
 ggplot(plotdata) + geom_point(aes(lda.LD1, lda.LD2, colour = type), size = 2.5)
 
 # Multivariate MANOVA
-res.man <- manova(cbind(zygomorphylong, zygomorphyshort, zygomorphyratio, sinus, ovary, sinusovaryratio, flowerlength, branchlength, thyrselength, pedicellength, petalexsertion) ~ species, data = combined)
+res.man <- manova(cbind(zygomorphylong, zygomorphyshort, zygomorphyratio, sinus, ovary, sinusovaryratio, flowerlength, branchlength, thyrselength, pedicellength, petallength) ~ species, data = combined)
 summary(res.man)
 
 # Break down variable importance
@@ -84,7 +72,7 @@ summary.aov(res.man)
 library(devtools)
 install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
 library(pairwiseAdonis)
-pairwise.adonis(combined[,c("zygomorphylong", "zygomorphyshort", "zygomorphyratio", "sinus", "ovary", "sinusovaryratio", "flowerlength", "branchlength", "thyrselength", "pedicellength", "petalexsertion")], combined$species, sim.method = "euclidean", p.adjust.m = "hochberg", perm = 10000)
+pairwise.adonis(combined[,c("zygomorphylong", "zygomorphyshort", "zygomorphyratio", "sinus", "ovary", "sinusovaryratio", "flowerlength", "branchlength", "thyrselength", "pedicellength", "petallength")], combined$species, sim.method = "euclidean", p.adjust.m = "hochberg", perm = 10000)
 
 ## Confusion matrix
 #library(class)
@@ -104,7 +92,7 @@ p3 <- ggplot(combined.nonnormalized, aes(y=zygomorphyratio, x=species)) + geom_b
 p4 <- ggplot(combined.nonnormalized, aes(y=pedicellength * 10, x=species)) + geom_boxplot() + xlab("") + ylab("Pedicel length (mm)") + theme(axis.text.x = element_text(angle = 45))
 p5 <- ggplot(combined.nonnormalized, aes(y=flowerlength * 10, x=species)) + geom_boxplot() + xlab("") + ylab("Flower length (mm)") + theme(axis.text.x = element_text(angle = 45))
 p6 <- ggplot(combined.nonnormalized, aes(y=thyrselength, x=species)) + geom_boxplot() + xlab("") + ylab("Thyrse length (mm)") + theme(axis.text.x = element_text(angle = 45))
-p7 <- ggplot(combined.nonnormalized, aes(y=petalexsertion * 10, x=species)) + geom_boxplot() + xlab("") + ylab("Petal exsertion (mm)") + theme(axis.text.x = element_text(angle = 45)) # Check the units
+p7 <- ggplot(combined.nonnormalized, aes(y=petallength * 10, x=species)) + geom_boxplot() + xlab("") + ylab("Petal length beyond\nsepal tips (mm)") + theme(axis.text.x = element_text(angle = 45)) # Check the units
 
 library(gridExtra)
 grid.arrange(p1, p2, p3, p4, p5, p6, p7, nrow = 2)
