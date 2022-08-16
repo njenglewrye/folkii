@@ -21,22 +21,13 @@ thyrse.avg <- thyrse %>% group_by(herbarium) %>% summarise(species = first(speci
 petal <- read.csv("petal_exsertion.csv")
 petal.avg <- petal %>% group_by(herbarium) %>% summarise(species = first(species), collectnum = first(collectnum), petalexsertion = mean(petalexsertion))
 
-### Run this one for PCA_MANOVA using averages of specimens
+# Make combined dataframe
 combined <- merge(zygomorphy.avg, pedicel.avg, by = "herbarium")
 combined <- merge(combined, campanulation.avg, by = "herbarium")
 combined <- merge(combined, flowerlength.avg, by = "herbarium")
 combined <- merge(combined, cymule.avg, by = "herbarium")
 combined <- merge(combined, thyrse.avg, by = "herbarium")
 combined <- merge(combined, petal.avg, by = "herbarium")
-
-### Run this one for PCA_MANOVA using individual measurements as datapoints
-combined <- merge(zygomorphy, pedicel, by = "herbarium")
-combined <- merge(combined, campanulation, by = "herbarium")
-combined <- merge(combined, flowerlength, by = "herbarium")
-combined <- merge(combined, cymule, by = "herbarium")
-combined <- merge(combined, thyrse, by = "herbarium")
-combined <- merge(combined, petal, by = "herbarium")
-
 
 
 # Remove duplicate columns from the merge
