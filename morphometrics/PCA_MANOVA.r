@@ -41,6 +41,9 @@ combined$collectnum.x <- NULL
 # Define species as a model factor
 combined$species <- as.factor(combined$species)
 
+# Remove problematic specimen
+combined <-combined[combined$collectnum != "McDonald 1470", ]
+
 # Normalize data matrix
 combined.nonnormalized <- combined
 combined <- rapply(combined,scale,c("numeric","integer"),how="replace")
