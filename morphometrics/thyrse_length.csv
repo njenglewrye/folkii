@@ -1,1 +1,74 @@
-﻿species,herbarium,collectnum,thyrselengthsanguinea,ASU ..58,Jon P. Rebman 2056,89.185sanguinea,ASU ..62,J. McCleary ASU0053381,57.119sanguinea,ASU ..62,J. McCleary ASU0053381,58.873sanguinea,ASU ..63,Harry Tate 373,128.53sanguinea,ASU ..63,Harry Tate 373,117.088sanguinea,ASU ..64,T.F. Daniel 2769,79.533sanguinea,ASU ..64,T.F. Daniel 2769,91.727sanguinea,ASU ..67,Dixie Damrel 45 ,77.578sanguinea,ASU ..67,Dixie Damrel 45 ,92.8sanguinea,ASU ..68,Bruce D. Parfitt 4227,27.583sanguinea,ASU ..68,Bruce D. Parfitt 4227,18.087sanguinea,CAS ..43,T.R. Van Devender 98-345,88.955sanguinea,CAS ..43,T.R. Van Devender 98-345,75.458sanguinea,CAS ..44 ,Edgar A. Mearns 1751,41.462sanguinea,MEXU ..58 (OSU?),Robert Bye 15604,22.896sanguinea,MEXU ..58 (OSU?),Robert Bye 15604,22.902sanguinea,MEXU ..62 (OSU?),Erv Wilson 8514,47.762sanguinea,MEXU ..66 (OSU?),C. G. Pringle 1588 ,64.616sanguinea,MEXU ..67 (OSU?),W. Trauba 212-98,33.087sanguinea,MEXU ..67 (OSU?),W. Trauba 212-98,35.47sanguinea,MEXU ..75 (OSU?),Stephen S. White 2712,91.914sanguinea,MEXU ..77 (OSU?),P. Tenorio 1888,35.161sanguinea,MEXU ..79 (OSU?),P. Tenorio 1799,45.107sanguinea,MEXU ..79 (OSU?),P. Tenorio 1799,38.69sanguinea,MEXU ..80 (OSU?),Agustin Flores M. 5038,24.602sanguinea,MICH Mexico ..49,Stephen S. White 3678,41.14sanguinea,MICH Mexico ..52,Stephen S. White 4305,50.078sanguinea,MICH Mexico ..52,Stephen S. White 4305,37.746sanguinea,MICH Mexico ..53,Stephen S. White 3287,35.169sanguinea,MICH Mexico ..53,Stephen S. White 3287,31.278sanguinea,MICH Mexico ..54,Stephen S. White 2712,60.088sanguinea,MICH Mexico ..54,Stephen S. White 2712,53.293mexicana,ARIZ ..05,Hinton et al. 24880,69.222mexicana,MEXU ..65,Schaffner 71,51.469mexicana,MEXU ..66,Pringle 10232,71.379mexicana,MEXU ..66,Pringle 10232,81.933mexicana,MEXU ..09,Tenorio 9576,41.976mexicana,MEXU ..09,Tenorio 9576,57.2mexicana,MEXU ..10,Vega 1937,108.168mexicana,MEXU ..10,Vega 1937,100.941mexicana,MEXU ..12,Ventura 859,36.124mexicana,MEXU ..12,Ventura 859,26.623mexicana,MEXU ..14,Benitez 2630,24.379mexicana,MEXU ..14,Benitez 2630,24.829mexicana,MEXU ..17,Gentry 2715,51.209lakelae,MO Mexico ..43,Ginzbarg 134,34.756lakelae,MO Mexico ..43,Ginzbarg 134,34.914lakelae,MO Mexico ..43,Ginzbarg 134,35.312lakelae,NY Mexico ..24,Ginzbarg 134,44.031lakelae,TEX ..66,McDonald 1470,38.23lakelae,TEX ..66,McDonald 1470,24folkii,TEX ..68,McDonald 1521,26.691lakelae,TEX ..69,Hinton 18855,20.692lakelae,TEX ..69,Hinton 18855,20.468lakelae,TEX ..69,Hinton 18855,24.468lakelae,TEX ..70,Ginzbarg 134,40.659lakelae,TEX ..70,Ginzbarg 134,45.67folkii,MEXU ..72,Lyonnet 3993,89.924folkii,MEXU ..73,Agosto 3641,19.76folkii,MEXU ..74,Hinton 18855,28.171folkii,MO Mexico ..38,Clark 6749,25.836folkii,MO Mexico ..38,Clark 6749,20.499folkii,MO Mexico ..38,Clark 6749,15.025folkii,TEX ..56,Hinrickson 16116,22.402folkii,TEX ..56,Hinrickson 16116,24.94folkii,TEX ..57,Hinton 20302,22.178folkii,TEX ..57,Hinton 20302,34.599folkii,TEX ..57,Hinton 20302,26.963folkii,TEX ..57,Hinton 20302,29.922folkii,TEX ..58,Ginzbarg 161,31.122folkii,TEX ..58,Ginzbarg 161,23.368folkii,TEX ..58,Ginzbarg 161,35.582folkii,TEX ..59,McDonald 1745,27.275
+﻿species,herbarium,collectnum,thyrselength
+sanguinea,ASU ..58,Jon P. Rebman 2056,89.185
+sanguinea,ASU ..62,J. McCleary ASU0053381,57.119
+sanguinea,ASU ..62,J. McCleary ASU0053381,58.873
+sanguinea,ASU ..63,Harry Tate 373,128.53
+sanguinea,ASU ..63,Harry Tate 373,117.088
+sanguinea,ASU ..64,T.F. Daniel 2769,79.533
+sanguinea,ASU ..64,T.F. Daniel 2769,91.727
+sanguinea,ASU ..67,Dixie Damrel 45 ,77.578
+sanguinea,ASU ..67,Dixie Damrel 45 ,92.8
+sanguinea,ASU ..68,Bruce D. Parfitt 4227,27.583
+sanguinea,ASU ..68,Bruce D. Parfitt 4227,18.087
+sanguinea,CAS ..43,T.R. Van Devender 98-345,88.955
+sanguinea,CAS ..43,T.R. Van Devender 98-345,75.458
+sanguinea,CAS ..44 ,Edgar A. Mearns 1751,41.462
+sanguinea,MEXU ..58 (OSU?),Robert Bye 15604,22.896
+sanguinea,MEXU ..58 (OSU?),Robert Bye 15604,22.902
+sanguinea,MEXU ..62 (OSU?),Erv Wilson 8514,47.762
+sanguinea,MEXU ..66 (OSU?),C. G. Pringle 1588 ,64.616
+sanguinea,MEXU ..67 (OSU?),W. Trauba 212-98,33.087
+sanguinea,MEXU ..67 (OSU?),W. Trauba 212-98,35.47
+sanguinea,MEXU ..75 (OSU?),Stephen S. White 2712,91.914
+sanguinea,MEXU ..77 (OSU?),P. Tenorio 1888,35.161
+sanguinea,MEXU ..79 (OSU?),P. Tenorio 1799,45.107
+sanguinea,MEXU ..79 (OSU?),P. Tenorio 1799,38.69
+sanguinea,MEXU ..80 (OSU?),Agustin Flores M. 5038,24.602
+sanguinea,MICH Mexico ..49,Stephen S. White 3678,41.14
+sanguinea,MICH Mexico ..52,Stephen S. White 4305,50.078
+sanguinea,MICH Mexico ..52,Stephen S. White 4305,37.746
+sanguinea,MICH Mexico ..53,Stephen S. White 3287,35.169
+sanguinea,MICH Mexico ..53,Stephen S. White 3287,31.278
+sanguinea,MICH Mexico ..54,Stephen S. White 2712,60.088
+sanguinea,MICH Mexico ..54,Stephen S. White 2712,53.293
+mexicana,ARIZ ..05,Hinton et al. 24880,69.222
+mexicana,MEXU ..65,Schaffner 71,51.469
+mexicana,MEXU ..66,Pringle 10232,71.379
+mexicana,MEXU ..66,Pringle 10232,81.933
+mexicana,MEXU ..09,Tenorio 9576,41.976
+mexicana,MEXU ..09,Tenorio 9576,57.2
+mexicana,MEXU ..10,Vega 1937,108.168
+mexicana,MEXU ..10,Vega 1937,100.941
+mexicana,MEXU ..12,Ventura 859,36.124
+mexicana,MEXU ..12,Ventura 859,26.623
+mexicana,MEXU ..14,Benitez 2630,24.379
+mexicana,MEXU ..14,Benitez 2630,24.829
+mexicana,MEXU ..17,Gentry 2715,51.209
+lakelae,MO Mexico ..43,Ginzbarg 134,34.756
+lakelae,MO Mexico ..43,Ginzbarg 134,34.914
+lakelae,MO Mexico ..43,Ginzbarg 134,35.312
+lakelae,NY Mexico ..24,Ginzbarg 134,44.031
+lakelae,TEX ..66,McDonald 1470,38.23
+lakelae,TEX ..66,McDonald 1470,24
+folkii,TEX ..68,McDonald 1521,26.691
+lakelae,TEX ..69,Hinton 18855,20.692
+lakelae,TEX ..69,Hinton 18855,20.468
+lakelae,TEX ..69,Hinton 18855,24.468
+lakelae,TEX ..70,Ginzbarg 134,40.659
+lakelae,TEX ..70,Ginzbarg 134,45.67
+folkii,MEXU ..72,Lyonnet 3993,89.924
+folkii,MEXU ..73,Lyonnet 3641 bis,19.76
+folkii,MEXU ..74,Hinton 18855,28.171
+folkii,MO Mexico ..38,Clark 6749,25.836
+folkii,MO Mexico ..38,Clark 6749,20.499
+folkii,MO Mexico ..38,Clark 6749,15.025
+folkii,TEX ..56,Hinrickson 16116,22.402
+folkii,TEX ..56,Hinrickson 16116,24.94
+folkii,TEX ..57,Hinton 20302,22.178
+folkii,TEX ..57,Hinton 20302,34.599
+folkii,TEX ..57,Hinton 20302,26.963
+folkii,TEX ..57,Hinton 20302,29.922
+folkii,TEX ..58,Ginzbarg 161,31.122
+folkii,TEX ..58,Ginzbarg 161,23.368
+folkii,TEX ..58,Ginzbarg 161,35.582
+folkii,TEX ..59,McDonald 1745,27.275
